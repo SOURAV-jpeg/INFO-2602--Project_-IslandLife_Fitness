@@ -1,10 +1,18 @@
 {% extends "layout.html" %}
-{% block title %}Flask MVC App{% endblock %}
-{% block page %}Flask MVC App{% endblock %}
 
-{{ super() }}
+{% block title %}Home Page{% endblock %}
 
-{% block content %}
-    <h1>Flask MVC</h1>
-    <p>This is a boileplate flask application which follows the MVC pattern for structuring the project.</p>
+{% block page %}IslandLife Fitness{% endblock %}
+
+{% block content%}
+<home>
+     <div class ="content">
+      <div class ="contentBx">
+        <h2>IslandLife Fitness </br>
+          Helping You Build the Perfect Body</h2>
+        <p>Join our Fitness Caribbean Gym for an unparalleled fitness experience that will transform your body and                 elevate your wellbeing! Our state-of-the-art facilities are equipped with top-of-the-line fitness equipment,             including cardio and strength training machines, and our experienced trainers are dedicated to helping you             achieve your fitness goals. Don't miss out on the opportunity to join our Fitness Caribbean Gym and take your             fitness journey to the next level!</p>
+      <a href="/signup">Get Started</a></div>
+    
+  </home>
+
 {% endblock %}

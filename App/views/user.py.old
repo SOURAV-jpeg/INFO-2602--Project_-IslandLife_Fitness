@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, jsonify, request, send_from_directory, flash, redirect, url_for
 from flask_jwt_extended import jwt_required, current_user as jwt_current_user
-from flask_login import current_user, login_required
+from flask_login import current_user, login_required,login_user
 from flask_login import LoginManager
 from.index import index_views
 
@@ -39,12 +39,12 @@ def display_exercises():
     print("exercises")
     return render_template('ExerciseList.html', exercises=exercises)
 
-# @user_views.route('/routines', methods=['GET'])
-# #@login_required
-# def display_routnies():
-#     routines = get_user_routines(current_user.id)
-#     print(routines)
-#     return render_template('ActualRoutinelist.html', users=routines)
+@user_views.route('/routines', methods=['GET'])
+@login_required
+def display_routnies():
+    routines = get_user_routines(current_user.id)
+    print(routines)
+    return render_template('ActualRoutinelist.html', users=routines)
 
 @user_views.route('/api/users', methods=['GET'])
 def get_users_action():
@@ -54,7 +54,7 @@ def get_users_action():
 @user_views.route('/api/users', methods=['POST'])
 def create_user_endpoint():
     data = request.json
-    create_user(data['username'], data['password'])
+    #user = create_user(data['username'], data['password'])
     return jsonify({'message': f"user {data['username']} created"})
 
 @user_views.route('/users', methods=['POST'])
@@ -68,20 +68,6 @@ def create_user_action():
 def static_user_page():
   return send_from_directory('static', 'static-user.html')
 
-
-# def user_required(func):
-#     @wraps(func)
-#     def wrapper(*args, **kwargs):
-#         if not current_user.is_authenticated or not isinstance(current_user, RegularUser):
-#             return "Unauthorized", 401
-#         return func(*args, **kwargs)
-#     return wrapper
-  
-# @user_views.route('/app', methods=['GET'])
-# @user_required
-# def todos_page():
-#   todos = todos = Todo.query.filter_by(user_id=current_user.id).all()
-#   return render_template('todo.html', todos=todos)
 @user_views.route('/routines', methods=['GET'])
 @login_required
 def display_routines():

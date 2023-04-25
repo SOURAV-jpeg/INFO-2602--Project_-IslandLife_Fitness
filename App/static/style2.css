@@ -1,0 +1,139 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+}
+.container{
+	width: 100%;
+	min-height: 150vh;
+
+  
+}
+.container h2{
+	color: #fff;
+	font-size:32px;
+	padding:50px 0;
+  font-weight: 700;
+	text-align: center;
+  margin-top: 70px;
+}
+.price-row{
+	width: 140%;
+	max-width: 1100px;
+	margin-left: -110px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	grid-gap: 25px;
+}
+.price-col{
+	background: #8b0000;
+	padding: 10% 15%;
+	border-radius: 10px;
+	color: #fff;
+	text-align: center;
+}
+.price-col p{
+	font-size: 22px;
+}
+.price-col h3{
+	font-size: 44px;
+	margin: 20px 0 40px;
+	font-weight: 500;
+}
+.price-col h3 span{
+	font-size: 16px;
+}
+.price-col ul{
+	text-align: left;
+	margin: 20px 0;
+	color: #ddd;
+}
+.price-col ul li{
+	margin: 15px 0;
+	size: 20px;
+}
+.price-col button{
+	width: 100%;
+	padding: 14px 0;
+	background: transparent;
+	color: #fff;
+	font-size: 15px;
+	border: 1px solid #fff;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: background 0.5s;
+}
+.price-col button:hover{
+	background: #000000;
+}
+
+header
+{
+position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo
+{
+  position: relative;
+  font-size: 2.7em;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+header .navigation
+{
+
+  
+  position: relative;
+  display: flex;
+  float: right;
+  text-align: right;
+  margin-top: 20px;
+  margin-right: -80px;
+  font-weight: 700;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+  
+}
+
+header .navigation li
+{
+  list-style: none;
+}
+header .navigation li a
+{
+  display: inline-block;
+  color: #fff;
+  margin-right: 50px;
+  text-decoration: none;
+}
+header .navigation li a:hover
+{
+  color: #ff0000;
+}
+section
+{
+  position:relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url(1.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 100px;
+}
+body{
+  	background: #000000;
+}

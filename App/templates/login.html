@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}Login Page{% endblock %}
+
+{% block page %}IslandLife{% endblock %}
+
+{% block content%}
+
+<login>
+   <div class="wrapper">
+    <div class="form-box login">
+      <h2>Login</h2>
+      <!-- <form action="#">
+        <div class ="input-box">
+        <span class="icon"></span>
+          <input type="username" required>
+          <label>Username</label>
+        </div>
+         <div class ="input-box">
+        <span class="icon"></span>
+          <input type="password" required>
+          <label>Password</label>
+        </div>
+        <div class="remember-forgot">
+          <label><input type="checkbox">Remember me</label>
+          <a href="/password">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="login-register">
+          <p>Don't have an account?<a href="/signup" class="register-link">Register</a></p>
+        </div>
+      </form> -->
+      <form class="col s12" method="POST" action="/login">
+        
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Username" name="username" type="text" class="validate">
+            <label for="username">Username</label>
+          </div>
+          <div class="input-field col s6">
+            <input placeholder="password" name="password" type="password" class="validate">
+            <label for="password">Password</label>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="input-field col s12">
+            <button class="btn waves-effect waves-light right purple" type="submit" name="action">Submit</button>
+          </div>
+        </div> 
+<p font color= "white">Don't have an account? Sign up <a href="/signup" background color="green" >here</a></p>
+      </form>
+    </div>
+     
+  </div>
+  </login>
+
+  {% endblock%}

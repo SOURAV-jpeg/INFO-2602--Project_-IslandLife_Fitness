@@ -18,3 +18,17 @@ def init():
 @index_views.route('/health', methods=['GET'])
 def health_check():
     return jsonify({'status':'healthy'})
+
+@index_views.route('/pricing', methods=['GET'])
+def get_user_page2():
+    return render_template('pricing.html')
+
+@index_views.route('/buy', methods=['GET'])
+def get_user_page3():
+    return render_template('buy.html')
+
+@index_views.route('/about', methods=['GET'])
+def get_user_page4():
+    return render_template('about.html')
+
+

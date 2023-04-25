@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}Create Routine{% endblock %}
+{% block page %}IslandLife{% endblock %}
+
+{% block content %}
+  <form method="POST" action="{{ form_action }}">
+    {% if routine %}
+      <input type="hidden" name="_method" value="PUT">
+    {% endif %}
+    <label for="name">Routine Name:</label>
+    <input type="text" name="name" value="{{ routine.name if routine else '' }}" required>
+    <label for="description">Routine Description:</label>
+    <textarea name="description" rows="5" required>{{ routine.description if routine else '' }}</textarea>
+    <button type="submit">{{ 'Update' if routine else 'Create' }} Routine</button>
+  </form>
+{% endblock %}

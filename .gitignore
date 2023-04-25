@@ -3,10 +3,10 @@ App/temp-database.db
 __pycache__/
 *.py[cod]
 *$py.class
-
+.replit
 # C extensions
 *.so
-
+replit.nix
 migrations/*
 
 # Distribution / packaging

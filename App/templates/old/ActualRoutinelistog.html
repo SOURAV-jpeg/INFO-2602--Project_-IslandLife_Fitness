@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}List of all Routinesss{% endblock %}
+{% block page %}IslandLife{% endblock %}
+
+{{ super() }}
+
+{% block content %}
+
+
+    <div class="row">
+      <table>
+        <thead>
+          <tr>
+            <th>Routine id</th><th> Routine name</th><th>user_id</th><th>Routine description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for user in users %}
+            <tr>
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.user_id}}</td>
+              <td>{{user.description}}</td>
+            </tr>
+          {% endfor %}
+        <tbody>
+      </table>
+    </div>
+
+{% endblock %}

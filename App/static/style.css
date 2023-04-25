@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+section
+{
+  position:relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url(1.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 100px;
+}
+section6
+{
+  position:relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url(7.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 100px;
+}
+section2
+{
+  
+  display: flex;
+  justify-content:center;
+  min-height: 150vh;
+  background: url(2.jpg);
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  padding: 100px;
+}
+section3
+{
+  
+  display: flex;
+  justify-content:center;
+  min-height: 150vh;
+  background: url(3.jpg);
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  padding: 100px;
+}
+section5
+{
+  
+   position:relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url(5.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 100px;
+}
+header
+{
+position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo
+{
+  position: relative;
+  font-size: 2.7em;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: #fff;
+}
+header .navigation
+{
+  position: relative;
+  display: flex;
+  float: right;
+  text-align: right;
+  margin-top: 20px;
+  margin-right: -80px;
+  font-weight: 700;
+   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+header .navigation li
+{
+  list-style: none;
+}
+header .navigation li a
+{
+  display: inline-block;
+  color: #fff;
+  margin-right: 50px;
+  text-decoration: none;
+}
+header .navigation li a:hover
+{
+  color: #ff0000;
+}
+.content
+{
+  max-width: 650px;
+  margin-right: 80px;
+  margin-top: 100px;
+  margin-left: -300px;
+}
+.content .contentBx h2
+{
+  font-size: 2.3em;
+  color: #fff;
+  line-height: 1em;
+  font-weight: 600;
+}
+.content .contentBx p
+{
+  font-size: 1em;
+  color: #fff;
+  font-weight: 300;
+  margin: 15px 0;
+  
+}
+.content .contentBx a
+{
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(255,255,255, .5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0,0,0,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.wrapper .form-box
+{
+  width: 100%;
+  padding: 40px;
+}
+.form-box h2
+{
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+  
+}
+
+.input-box
+{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #fff;
+  margin: 30px 0;
+}
+
+.input-box label
+{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color:#fff;
+  font-weight: 500;
+  pointer-events: none;
+  transition: .5s;
+}
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+  top: -5px;
+}
+.remember-forgot{
+  font-size: .9em;
+  color: #fff;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.remember-forgot label input{
+  accent-color: #fff;
+}
+.remember-forgot a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover{
+  text-decoration: underline;
+}
+.btn{
+  width: 100%;
+  height: 45px;
+  background: #808080;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+}
+
+.login-register{
+  font-size: .9em;
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+  
+}
+
+.login-register p a {
+  color: #FFFF00;
+  text-decoration: none;
+  font-weight: 600;
+  
+}
+
+.login-register p a:hover{
+  text-decoration: underline;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.card{
+  background-image: linear-gradient(black, white);
+  width: 270px;
+  height: 400px;
+  margin: 10px;
+}
+th,
+td {
+  color: white;
+}
+table{
+  margin-left: -100px;
+}

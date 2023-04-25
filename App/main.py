@@ -1,11 +1,18 @@
 import os
-from flask import Flask
+from flask import Flask, request,render_template,flash, redirect, url_for, jsonify
 from flask_login import LoginManager, current_user
 from flask_uploads import DOCUMENTS, IMAGES, TEXT, UploadSet, configure_uploads
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
 from werkzeug.datastructures import  FileStorage
 from datetime import timedelta
+
+
+from flask_login import login_required , current_user
+
+from App.database import db
+
+from functools import wraps
 
 from App.database import init_db
 from App.config import config
@@ -28,6 +35,7 @@ def configure_app(app, config, overrides):
         else:
             app.config[key] = config[key]
 
+
 def create_app(config_overrides={}):
     app = Flask(__name__, static_url_path='/static')
     configure_app(app, config, config_overrides)
@@ -45,3 +53,6 @@ def create_app(config_overrides={}):
     setup_flask_login(app)
     app.app_context().push()
     return app
+
+app = create_app()
+
